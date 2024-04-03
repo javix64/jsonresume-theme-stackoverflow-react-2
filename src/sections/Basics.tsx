@@ -4,7 +4,6 @@ import type {
   Basics as BasicsProps,
   Profile as ProfileProps,
 } from "../types";
-import * as R from "ramda";
 
 const Location: React.FC<LocationProps> = ({
   address,
@@ -54,32 +53,33 @@ export const Contact: React.FC<BasicsProps> = ({ email, url, phone }) => (
   </div>
 );
 
-const Profile: React.FC<ProfileProps> = ({ network, username, url }) => (
-  <div className="item">
-    {network && (
-      <div className="username">
-        <span
-          className={`fab fa-${R.toLower(network)} ${R.toLower(
-            network
-          )} social`}
-        ></span>
-        {url ? (
-          <span className="url">
-            <a target="_blank" href={url} rel="noreferrer">
+const Profile: React.FC<ProfileProps> = ({ network, username, url }) => {
+  console.log(network, url);
+  return (
+    <div className="item">
+      {network && (
+        <div className="username">
+          <span
+            className={`fab fa-${network.toLowerCase()} ${network.toLocaleLowerCase()} social`}
+          ></span>
+          {url ? (
+            <span className="url">
+              <a target="_blank" href={url} rel="noreferrer">
+                {"\u00A0"}
+                {username}
+              </a>
+            </span>
+          ) : (
+            <span>
               {"\u00A0"}
               {username}
-            </a>
-          </span>
-        ) : (
-          <span>
-            {"\u00A0"}
-            {username}
-          </span>
-        )}
-      </div>
-    )}
-  </div>
-);
+            </span>
+          )}
+        </div>
+      )}
+    </div>
+  )
+};
 
 export const Basics: React.FC<BasicsProps> = (props) => {
   const { name, label, location, image, profiles, summary } = props;
