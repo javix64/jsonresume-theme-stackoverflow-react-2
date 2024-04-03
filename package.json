@@ -8,7 +8,7 @@
     "url": "https://github.com/levino/jsonresume-theme-stackoverflow-react"
   },
   "license": "MIT",
-  "main": "./dist/es/index.js",
+  "main": "./dist/en/index.js",
   "exports": {
     ".": "./dist/en/index.js",
     "./spanish": "./dist/es/index.js",
