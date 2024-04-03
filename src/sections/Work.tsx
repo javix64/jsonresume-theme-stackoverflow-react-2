@@ -1,6 +1,6 @@
 import React from "react";
-import { Work as WorkItem } from "./types";
-import { MY } from "./dateHelpers";
+import { Work as WorkItem } from "../types";
+import { MY } from "../helpers/date";
 import { withTranslation, WithTranslation } from "react-i18next";
 
 export const Work = withTranslation()(
@@ -8,10 +8,7 @@ export const Work = withTranslation()(
     work.length ? (
       <section className="section">
         <header>
-          <h2 className="section-title">
-            {t("Work Experience")}{" "}
-            <span className="item-count">({work.length})</span>
-          </h2>
+          <h2 className="section-title">{t("Work Experience")}</h2>
         </header>
 
         <section id="work">

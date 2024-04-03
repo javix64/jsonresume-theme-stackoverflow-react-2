@@ -1,6 +1,6 @@
 import i18n from "i18next";
-import translations from "./translations.json";
-export type Language = "en" | "de";
+import translations from "./locales/translations.json";
+export type Language = "en" | "de" | "es";
 
 export const createI18N = (language: Language) => {
   i18n.init({
@@ -12,7 +12,7 @@ export const createI18N = (language: Language) => {
     interpolation: {
       escapeValue: false, // react already safes from xss
     },
-    fallbackLng: "en",
+    fallbackLng: "es",
   });
   return i18n;
 };

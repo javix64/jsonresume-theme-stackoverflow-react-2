@@ -1,5 +1,5 @@
 import React from "react";
-import { EducationProps } from "./types";
+import { EducationProps } from "../types";
 import { withTranslation, WithTranslation } from "react-i18next";
 
 export const Education = withTranslation()(
@@ -13,10 +13,7 @@ export const Education = withTranslation()(
     return (
       <section className="section">
         <header>
-          <h2 className="section-title">
-            {t("Education")}{" "}
-            <span className="item-count">({education.length})</span>
-          </h2>
+          <h2 className="section-title">{t("Education")}</h2>
         </header>
 
         <section id="education">

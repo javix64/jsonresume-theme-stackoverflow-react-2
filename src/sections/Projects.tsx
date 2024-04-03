@@ -1,6 +1,6 @@
 import React from "react";
-import { Project } from "./types";
-import { MY } from "./dateHelpers";
+import { Project } from "../types";
+import { MY } from "../helpers/date";
 import { withTranslation, WithTranslation } from "react-i18next";
 export const Projects = withTranslation()(
   ({ projects, t }: { projects: Project[] } & WithTranslation) => (
@@ -8,10 +8,7 @@ export const Projects = withTranslation()(
       {projects.length > 0 && (
         <section className="section">
           <header>
-            <h2 className="section-title">
-              {t("Projects")}{" "}
-              <span className="item-count">({projects.length})</span>
-            </h2>
+            <h2 className="section-title">{t("Projects")}</h2>
           </header>
           <section id="projects">
             {projects.map((project, index) => (

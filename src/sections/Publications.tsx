@@ -1,6 +1,6 @@
 import React from "react";
-import { Publication } from "./types";
-import { DMY } from "./dateHelpers";
+import { Publication } from "../types";
+import { DMY } from "../helpers/date";
 import { withTranslation, WithTranslation } from "react-i18next";
 
 export const Publications = withTranslation()(

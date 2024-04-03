@@ -1,4 +1,4 @@
-import { Reference } from "./types";
+import { Reference } from "../types";
 import { withTranslation, WithTranslation } from "react-i18next";
 
 export const References = withTranslation()(

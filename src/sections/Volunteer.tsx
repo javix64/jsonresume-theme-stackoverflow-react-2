@@ -1,5 +1,5 @@
 import React from "react";
-import { Volunteer as VolunteerInterface } from "./types";
+import { Volunteer as VolunteerInterface } from "../types";
 import { withTranslation, WithTranslation } from "react-i18next";
 interface VolunteerProps {
   volunteer: VolunteerInterface[];

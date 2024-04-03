@@ -3,7 +3,7 @@ import type {
   Location as LocationProps,
   Basics as BasicsProps,
   Profile as ProfileProps,
-} from "./types";
+} from "../types";
 import * as R from "ramda";
 
 const Location: React.FC<LocationProps> = ({

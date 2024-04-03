@@ -1,0 +1,12 @@
+export { Awards } from "./Awards";
+export { Basics } from "./Basics";
+export { Certificates } from "./Certificates";
+export { Education } from "./Education";
+export { Interests } from "./Interests";
+export { Languages } from "./Languages";
+export { Projects } from "./Projects";
+export { Publications } from "./Publications";
+export { References } from "./References";
+export { Skills } from "./Skills";
+export { Volunteer } from "./Volunteer";
+export { Work } from "./Work";
