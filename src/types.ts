@@ -195,7 +195,25 @@ export interface Language {
   /**
    * e.g. Fluent, Beginner
    */
-  fluency?: string;
+  fluency?: LanguageFluency
+}
+interface LanguageFluency {
+  /**
+   * e.g. Level of your speaking
+   */
+  speaking?: string;
+  /**
+   * e.g. Level of your listening
+   */
+  listening?: string;
+  /**
+   * e.g. Level of your reading
+   */
+  reading?: string;
+  /**
+   * e.g. Level of your writing
+   */
+  writing?: string;
 }
 export interface Interest {
   /**

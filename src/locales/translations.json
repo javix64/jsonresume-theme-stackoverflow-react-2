@@ -1,6 +1,22 @@
 {
   "en": {
-    "translation": {}
+    "translation": {
+      "Skills": "Skills",
+      "Interests": "Interests",
+      "Work Experience": "Work Experience",
+      "Certificates": "Certificates",
+      "Projects": "Projects",
+      "Volunteer": "Volunteer",
+      "Education": "Education",
+      "Awards": "Awards",
+      "Publications": "Publications",
+      "Languages": "Languages",
+      "References": "References",
+      "Reading": "Reading",
+      "Writing": "Writing",
+      "Speaking": "Speaking",
+      "Listening": "Listening"
+    }
   },
   "de": {
     "translation": {
@@ -14,7 +30,11 @@
       "Awards": "Auszeichnungen",
       "Publications": "Veröffentlichungen",
       "Languages": "Sprachen",
-      "References": "Referenzen"
+      "References": "Referenzen",
+      "Reading": "Lesen",
+      "Writing": "Schreiben",
+      "Speaking": "Sprechen",
+      "Listening": "Anhören"
     }
   },
   "es": {
@@ -29,7 +49,11 @@
       "Awards": "Reconocimientos",
       "Publications": "Publicaciones",
       "Languages": "Idiomas",
-      "References": "Referencias"
+      "References": "Referencias",
+      "Reading": "Leido",
+      "Writing": "Escrito",
+      "Speaking": "Hablado",
+      "Listening": "Escuchado"
     }
   }
 }
