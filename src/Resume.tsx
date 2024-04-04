@@ -31,23 +31,25 @@ export const Resume: React.FC<ResumeProps> = (resume) => {
     references,
   } = resume;
   return (
-    <div id="resume">
+    <>
       <Basics {...basics} />
-      {work && <Work work={work} />}
-      {projects && <Projects projects={projects} />}
-      {skills && <Skills skills={skills} />}
-      {volunteer && <Volunteer volunteer={volunteer} />}
-      {education && <Education education={education} />}
-      {awards && <Awards awards={awards} />}
-      {certificates && (
-        <Certificates certificates={certificates} />
-      )}
-      {publications && (
-        <Publications publications={publications} />
-      )}
-      {languages && <Languages languages={languages} />}
-      {interests && <Interests interests={interests} />}
-      {references && <References references={references} />}
-    </div>
+      <div id="mainContainer">
+        <div id="sideContainer">
+          {projects && <Projects projects={projects} />}
+          {skills && <Skills skills={skills} />}
+        </div>
+        <div id="resume">
+          {work && <Work work={work} />}
+          {education && <Education education={education} />}
+          {volunteer && <Volunteer volunteer={volunteer} />}
+          {awards && <Awards awards={awards} />}
+          {certificates && <Certificates certificates={certificates} />}
+          {publications && <Publications publications={publications} />}
+          {languages && <Languages languages={languages} />}
+          {interests && <Interests interests={interests} />}
+          {references && <References references={references} />}
+        </div>
+      </div>
+    </>
   );
 };

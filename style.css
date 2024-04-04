@@ -188,8 +188,27 @@ strong {
 
 /* main container */
 
+#basics,#mainContainer{
+  width:850px;
+  margin:auto;
+}
+#basics{
+  margin-top:10px;
+}
+#mainContainer{
+  display:flex;
+  flex-direction:row;
+  justify-content:center;
+}
+
+#sideContainer{
+  width: 30%;
+  margin-right:30px;
+  background-color: #ccc;
+}
+
 #resume {
-  padding: 1.5rem;
+  width:70%;
 }
 
 /* every section wrapper */
@@ -249,7 +268,7 @@ section .location {
 }
 
 #header .image {
-  width: 11em;
+  width: 10em;
   float: right;
   border-radius: 4px;
 }
@@ -287,8 +306,8 @@ section .location {
   position: absolute;
   left: 0;
   top: 0.7em;
-  height: 1px;
-  background: #ccc;
+  height: 2px;
+  background: #fcae84;
   content: "";
   width: 100%;
   z-index: -100;
@@ -499,7 +518,7 @@ section .location {
   width: 15em;
 }
 
-/* Skill chart */
+/* Skill/Language chart */
 
 .level {
   margin-bottom: 0.5em;
@@ -526,27 +545,31 @@ section .location {
   height: 5px;
 }
 
-.level.beginner .bar::after {
-  background: #eb5f51;
+.level.essential .bar::after {
+  background: rgba(241, 203, 75, 0.808);
   width: 2.5em;
 }
 
 .level.intermediate .bar::after {
-  background: #ffdf1f;
+  background: #ffe23c;
   width: 5em;
 }
 
 .level.advanced .bar::after,
 .level.fluent .bar::after {
-  background: #5cb85c;
+  background: #59c596;
   width: 7.5em;
 }
 
 .level.master .bar::after,
 .level.native.speaker .bar::after {
-  background: #59c596;
+  background:   #5cb85c;
   width: 10em;
 }
+
+/******************
+*	References
+******************/
 
 #references .item {
   padding-left: 0.5em;
@@ -585,7 +608,6 @@ section .location {
 @media screen and (min-width: 602px) {
   #resume {
     width: 80%;
-    margin: 0 auto;
   }
   .section header .date {
     float: right;
@@ -610,8 +632,8 @@ section .location {
     margin-left: 1.5em;
   }
   #resume {
-    width: 820px;
-    margin: 2rem auto;
+    width: 80%;
+    /* margin: 2rem auto; */
   }
   .section > section > header .space-left {
     opacity: 1;
@@ -751,4 +773,18 @@ section .location {
   .fa-map-marker-alt:before {
     padding-left: 0.1em;
   }
+}
+
+/* Table language */
+table {
+  width:100%;
+}
+thead{
+  border-bottom:2px solid #ccc ;
+}
+.tdh3{
+  vertical-align: middle;
+}
+.trtbody{
+  height:40px !important;
 }
