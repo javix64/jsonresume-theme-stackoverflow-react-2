@@ -2,6 +2,7 @@ import React from "react";
 import { Language } from "../types";
 import { withTranslation, WithTranslation } from "react-i18next";
 import { HeaderSection } from "../components/HeaderSection";
+import { LevelChart } from "../components/LevelChart";
 export const Languages = withTranslation()(
   ({ languages, t }: { languages: Language[] } & WithTranslation) => (
     <>
@@ -39,36 +40,16 @@ export const Languages = withTranslation()(
                         <h4>{language}</h4>
                       </td>
                       <td>
-                        <div
-                          className={`level fluency ${speaking.toLowerCase()} tdh3`}
-                        >
-                          <em>{speaking}</em>
-                          <div className="bar"></div>
-                        </div>
+                        <LevelChart name={speaking} />
                       </td>
                       <td>
-                        <div
-                          className={`level fluency ${listening.toLowerCase()}`}
-                        >
-                          <em>{listening}</em>
-                          <div className="bar"></div>
-                        </div>
+                        <LevelChart name={listening} />
                       </td>
                       <td>
-                        <div
-                          className={`level fluency ${reading.toLowerCase()}`}
-                        >
-                          <em>{reading}</em>
-                          <div className="bar"></div>
-                        </div>
+                        <LevelChart name={reading} />
                       </td>
                       <td>
-                        <div
-                          className={`level fluency ${writing.toLowerCase()}`}
-                        >
-                          <em>{writing}</em>
-                          <div className="bar"></div>
-                        </div>
+                        <LevelChart name={writing} />
                       </td>
                     </tr>
                   );

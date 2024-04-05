@@ -1,6 +1,7 @@
 import React from "react";
 import { Skill } from "../types";
 import { withTranslation, WithTranslation } from "react-i18next";
+import { LevelChart } from "../components/LevelChart";
 
 export const Skills = withTranslation()(
   ({ skills, t }: { skills: Skill[] } & WithTranslation) =>
@@ -14,10 +15,7 @@ export const Skills = withTranslation()(
             <div className="item" key={index}>
               {skill.name && <h3 className="name">{skill.name}</h3>}
               {skill.level && (
-                <div className={`level ${skill.level.toLowerCase()}`}>
-                  <em>{skill.level}</em>
-                  <div className="bar"></div>
-                </div>
+                <LevelChart name={skill.level}/>
               )}
               {skill.keywords?.length && (
                 <ul className="keywords">

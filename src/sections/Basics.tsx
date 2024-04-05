@@ -26,7 +26,12 @@ export const Contact: React.FC<BasicsProps> = ({ email, url, phone }) => (
     {url && (
       <div className="website">
         <span className="fas fa-external-link-alt"></span>
-        <a className="hide-href-print" target="_blank" href={url} rel="noreferrer">
+        <a
+          className="hide-href-print"
+          target="_blank"
+          href={url}
+          rel="noreferrer"
+        >
           {"\u00A0"}
           {url}
         </a>
@@ -77,13 +82,13 @@ const Profile: React.FC<ProfileProps> = ({ network, username, url }) => {
         </div>
       )}
     </div>
-  )
+  );
 };
 
 export const Basics: React.FC<BasicsProps> = (props) => {
   const { name, label, location, image, profiles, summary } = props;
   return (
-    <>
+    <div id="intro">
       <header id="header" className="clear">
         {image && <img className="image" src={image} alt={`${name}`} />}
         <div className="middle">
@@ -107,6 +112,6 @@ export const Basics: React.FC<BasicsProps> = (props) => {
           </section>
         </section>
       )}
-    </>
+    </div>
   );
 };

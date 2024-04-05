@@ -1,5 +1,4 @@
 import { withTranslation, WithTranslation } from "react-i18next";
-import { Language } from "../types";
 
 export const HeaderSection = withTranslation()(
   ({ t, title }: { title: string } & WithTranslation) => (
