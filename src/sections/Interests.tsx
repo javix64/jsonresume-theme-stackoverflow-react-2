@@ -1,3 +1,4 @@
+import { HeaderSection } from "../components/HeaderSection";
 import { Interest } from "../types";
 import { withTranslation, WithTranslation } from "react-i18next";
 
@@ -9,9 +10,8 @@ export const Interests = withTranslation()(
 
     return (
       <section className="section">
-        <header>
-          <h2 className="section-title">{t("Interests")}</h2>
-        </header>
+        <HeaderSection title="Interests" />
+
         <section id="interests">
           {interests.map((interest, index) => (
             <div key={index} className="item">

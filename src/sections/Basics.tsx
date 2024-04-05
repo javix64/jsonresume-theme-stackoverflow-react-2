@@ -54,7 +54,6 @@ export const Contact: React.FC<BasicsProps> = ({ email, url, phone }) => (
 );
 
 const Profile: React.FC<ProfileProps> = ({ network, username, url }) => {
-  console.log(network, url);
   return (
     <div className="item">
       {network && (

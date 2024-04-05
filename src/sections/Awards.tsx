@@ -1,15 +1,14 @@
 import React from "react";
 import { Award } from "../types";
 import { withTranslation, WithTranslation } from "react-i18next";
+import { HeaderSection } from "../components/HeaderSection";
 
 export const Awards = withTranslation()(
   ({ awards, t }: { awards: Award[] } & WithTranslation) => (
     <>
       {awards.length > 0 && (
         <section className="section">
-          <header>
-            <h2 className="section-title">{t("Awards")}</h2>
-          </header>
+          <HeaderSection title="awards" />
           <section id="awards">
             {awards.map((award, index) => (
               <section key={index} className="award-item">

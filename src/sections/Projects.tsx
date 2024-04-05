@@ -2,14 +2,13 @@ import React from "react";
 import { Project } from "../types";
 import { MY } from "../helpers/date";
 import { withTranslation, WithTranslation } from "react-i18next";
+import { HeaderSection } from "../components/HeaderSection";
 export const Projects = withTranslation()(
   ({ projects, t }: { projects: Project[] } & WithTranslation) => (
     <>
       {projects.length > 0 && (
         <section className="section">
-          <header>
-            <h2 className="section-title">{t("Projects")}</h2>
-          </header>
+          <HeaderSection title="Projects" />
           <section id="projects">
             {projects.map((project, index) => (
               <section className="project-item" key={index}>

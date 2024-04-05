@@ -2,14 +2,13 @@ import React from "react";
 import { Publication } from "../types";
 import { DMY } from "../helpers/date";
 import { withTranslation, WithTranslation } from "react-i18next";
+import { HeaderSection } from "../components/HeaderSection";
 
 export const Publications = withTranslation()(
   ({ publications, t }: { publications: Publication[] } & WithTranslation) =>
     publications.length > 0 ? (
       <section className="section">
-        <header>
-          <h2 className="section-title">{t("Publications")}</h2>
-        </header>
+        <HeaderSection title="Publications" />
         <section id="publications">
           {publications.map((publication, index) => (
             <section className="publication-item" key={index}>

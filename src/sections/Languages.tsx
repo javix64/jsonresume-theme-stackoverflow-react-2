@@ -1,32 +1,31 @@
 import React from "react";
 import { Language } from "../types";
 import { withTranslation, WithTranslation } from "react-i18next";
+import { HeaderSection } from "../components/HeaderSection";
 export const Languages = withTranslation()(
   ({ languages, t }: { languages: Language[] } & WithTranslation) => (
     <>
       {languages.length && (
         <section className="section">
-          <header>
-            <h2 className="section-title">{t("Languages")}</h2>
-          </header>
+          <HeaderSection title="Languages" />
           <section id="languages">
             <table>
               <thead>
                 <tr>
                   <td>
-                    <h3>{t("Languages")}</h3>
+                    <h4>{t("Languages")}</h4>
                   </td>
                   <td>
-                    <h3>{t("Speaking")}</h3>
+                    <h4>{t("Speaking")}</h4>
                   </td>
                   <td>
-                    <h3>{t("Listening")}</h3>
+                    <h4>{t("Listening")}</h4>
                   </td>
                   <td>
-                    <h3>{t("Reading")}</h3>
+                    <h4>{t("Reading")}</h4>
                   </td>
                   <td>
-                    <h3>{t("Writing")}</h3>
+                    <h4>{t("Writing")}</h4>
                   </td>
                 </tr>
               </thead>
@@ -37,7 +36,7 @@ export const Languages = withTranslation()(
                   return (
                     <tr key={language}>
                       <td className="tdh3 trtbody">
-                        <h3>{language}</h3>
+                        <h4>{language}</h4>
                       </td>
                       <td>
                         <div

@@ -1,3 +1,4 @@
+import { HeaderSection } from "../components/HeaderSection";
 import { Certificate } from "../types";
 import { withTranslation, WithTranslation } from "react-i18next";
 
@@ -6,9 +7,7 @@ export const Certificates = withTranslation()(
     <>
       {certificates.length > 0 && (
         <section className="section">
-          <header>
-            <h2 className="section-title">{t("Certificates")}</h2>
-          </header>
+          <HeaderSection title="Certificates" />
           <section id="certificates">
             {certificates.map((certificate, index) => (
               <section key={index} className="certificate-item">

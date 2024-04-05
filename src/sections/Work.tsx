@@ -2,15 +2,13 @@ import React from "react";
 import { Work as WorkItem } from "../types";
 import { MY } from "../helpers/date";
 import { withTranslation, WithTranslation } from "react-i18next";
+import { HeaderSection } from "../components/HeaderSection";
 
 export const Work = withTranslation()(
   ({ work, t }: { work: WorkItem[] } & WithTranslation) =>
     work.length ? (
       <section className="section">
-        <header>
-          <h2 className="section-title">{t("Work Experience")}</h2>
-        </header>
-
+        <HeaderSection title="Work Experience" />
         <section id="work">
           {work.map((workItem, index) => (
             <section key={index} className="work-item">
@@ -36,7 +34,13 @@ export const Work = withTranslation()(
                     {workItem.position && (
                       <div className="position">{workItem.position}</div>
                     )}
-                    <div className="company">{workItem.name}</div>
+                    <div className="company">
+                      <span className="fas fa-external-link-alt" />
+                      <a target="_blank" href={workItem.url} rel="noreferrer">
+                        {"\u00A0"}
+                        {workItem.name}
+                      </a>
+                    </div>
                   </header>
                 </>
               )}
@@ -57,16 +61,6 @@ export const Work = withTranslation()(
                     <li key={index}>{keyword}</li>
                   ))}
                 </ul>
-              )}
-
-              {workItem.url && (
-                <span className="url">
-                  <span className="fas fa-external-link-alt" />
-                  <a target="_blank" href={workItem.url} rel="noreferrer">
-                    {"\u00A0"}
-                    {workItem.url}
-                  </a>
-                </span>
               )}
 
               <div className="item" id="work-item">

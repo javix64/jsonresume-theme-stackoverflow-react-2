@@ -1,6 +1,7 @@
 import React from "react";
 import { EducationProps } from "../types";
 import { withTranslation, WithTranslation } from "react-i18next";
+import { HeaderSection } from "../components/HeaderSection";
 
 export const Education = withTranslation()(
   ({ education, t }: { education: EducationProps[] } & WithTranslation) => {
@@ -12,9 +13,7 @@ export const Education = withTranslation()(
 
     return (
       <section className="section">
-        <header>
-          <h2 className="section-title">{t("Education")}</h2>
-        </header>
+        <HeaderSection title="Education" />
 
         <section id="education">
           {education.map((edu, index) => (

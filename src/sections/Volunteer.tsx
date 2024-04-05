@@ -1,6 +1,7 @@
 import React from "react";
 import { Volunteer as VolunteerInterface } from "../types";
 import { withTranslation, WithTranslation } from "react-i18next";
+import { HeaderSection } from "../components/HeaderSection";
 interface VolunteerProps {
   volunteer: VolunteerInterface[];
 }
@@ -13,9 +14,7 @@ export const Volunteer = withTranslation()(
 
     return (
       <section className="section">
-        <header>
-          <h2 className="section-title">{t("Volunteer")}</h2>
-        </header>
+        <HeaderSection title="Volunteer" />
         <section id="volunteer">
           {volunteer.map((item, index) => (
             <section key={index} className="volunteer-item">
